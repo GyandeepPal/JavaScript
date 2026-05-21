@@ -65,10 +65,28 @@
 
 
 // Example 3 — Remove empty strings
-const name =["Apple","papaya","orange"]
-const item = name.filter(i=>i !=="")
-console.log(item);
+// const name =["Apple","papaya","orange"]
+// const item = name.filter(i=>i !=="")
+// console.log(item);
 
+
+
+// 3. reduce() — Boil Down to One Value
+// Syntax
+// array.reduce(callbackFn(accumulator,current,index,),initialValue)
+// // Example 1 — Sum of all numbers
+// const num =[2,3,4,52,5,,66,7]
+// const sum = num.reduce((acc, curr)=>acc + curr, 0)
+// console.log(sum);
+
+// Example 2 — Count fruit occurrences
+const fruit = ["apple","mango","papaya","apple","mango","watermallen","papaya"]
+const Count= fruit.reduce((acc, curr)=>{
+    acc[fruit]= (acc[fruit] || 0)+1;
+    return acc;
+},
+{})
+console.log(Count)
 
 
 </script>
