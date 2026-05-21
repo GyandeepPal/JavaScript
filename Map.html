@@ -80,13 +80,27 @@
 // console.log(sum);
 
 // Example 2 — Count fruit occurrences
-const fruit = ["apple","mango","papaya","apple","mango","watermallen","papaya"]
-const Count= fruit.reduce((acc, curr)=>{
-    acc[fruit]= (acc[fruit] || 0)+1;
-    return acc;
-},
-{})
-console.log(Count)
+// const fruit = ["apple","mango","papaya","apple","mango","watermallen","papaya"]
+// const Count= fruit.reduce((acc, curr)=>{
+//     acc[fruit]= (acc[fruit] || 0)+1;
+//     return acc;
+// },
+// {})
+// console.log(Count)
+
+// Example 3 — Total cart price
+// const carts =[{item:"book",price:120},{item:"water",price:50}];
+// const total = carts.reduce((sum,p)=>sum+p.price,0)
+// console.log(total);
+
+
+// 4. find() — Get the First Match
+// find() returns the first element that passes the test and stops immediately. Returns undefined if nothing is found.
+
+const num=[1,2,4,5,3,4,6]
+const firstEven = num.findIndex(n => n % 3 === 0);
+console.log(firstEven);
+
 
 
 </script>
