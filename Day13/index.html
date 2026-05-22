@@ -1,0 +1,65 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // let obj = {
+    //     id :1,
+    //     firstName:"Rahul",
+    //     lastNmae:"Pal",
+    //     fullName:function(city){
+    //         console.log(this.firstName+""+this.lastNmae);
+    //     }
+    // }
+    // obj.fullName()
+    // userOm={
+    //      id :2,
+    //     firstName:"Gyan Deep", 
+    //     lastNmae:"Utkal",
+    //     }
+    //     obj.fullName.call(userOm)
+
+    // let obj={
+    //     id:1,
+    //     firstName:"Rahul",
+    //     lastName:"Gyan",
+    //     fullName:function(city){
+    //         console.log(this.firstName+""+this.lastName+""+city)
+    //     }
+        
+    // }
+    // main={
+    //     id:3,
+    //     firstName:"haa",
+    //     lastName:"mai"
+    // }
+    // obj.fullName.apply(main,["delhi",23])
+    
+
+    
+    
+    
+    let userOne={
+    name:"Durvendra",
+    age:30,
+    address:{
+        city:"BHOPAL",
+        country:"INDIA"
+    }
+    }
+    let userTwo=structuredClone(userOne)
+    userTwo.address.city="Indore"
+    console.log(userOne.address.city);
+    console.log(userTwo.address.city);
+
+    
+</script>
+</html>
+
+ 
