@@ -10,12 +10,45 @@
 </body>
 <script>
 // array.reduce(callbackFn(accumulator,current,index,),initialValue)
-const num =[2,3,4,56,77,];
-const print = num.reduce((acc)=>acc  ,0)
-console.log(print);
+// const num =[2,3,4,56,77,];
+// const print = num.reduce((acc)=>acc  ,0)
+// console.log(print);
 
-let marks=[28,35,34,546,4,56,654,]
-console.log(marks);
+// let marks=[28,35,34,546,4,56,654,]
+// console.log(marks);
+
+// const nuns = [
+//     23,4,4,5,66,4,3,,2,34,5,6,7,
+// ]
+// const host = nuns.reduce((acc, curr )=>acc+curr)
+// console.log(host);
+
+
+// find() returns the first element that passes the test and stops immediately. Returns undefined if nothing is found.
+
+// const main= [3343,5,2,3,45,5,345,4];
+// const findEven= main.find(n=>n%7>=0)
+// console.log(findEven);
+
+
+// const main = [
+//     23,718,13,43,54,"hjas","ida"
+// ];
+// const mains  = main.find(n=>n%2==0)
+// console.log(mains);
+
+
+
+
+// forEach() runs a function for each element but returns undefined. Use it for logging, updating DOM, or any action
+// where you don't need a return value.\
+
+
+const fruits = ["Raaj","HAA","jAJJAJ","hnbx"]
+const main=fruits.forEach((fruit, index)=>{
+    console.log(`${index+1}.${fruit}`);
+});
+
 
 </script>
 </html>
