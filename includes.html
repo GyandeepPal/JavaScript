@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+// These two methods help you search for a value inside an array. They are simple, fast, and use strict equality (===)
+// to compare.
+// 15. includes() — Does it Exist?
+// includes() checks if an array contains a specific value. Returns true or false. Simple and readable!
+
+const colors =["red","green","orang"];
+
+colors.includes("yellow")
+colors.includes("black")
+
+const roles = ["admin","editor","viewer"]
+if(colors.includes("admin")){
+console.log("acces granted");
+
+
+const allowedCodes = [200, 201, 204];
+console.log(allowedCodes.includes(404)); // → false
+
+console.log(allowedCodes.includes(200));  // → true
+
+}
+
+
+</script>
+</html>
