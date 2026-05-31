@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Since map(), filter(), and most methods return a new array, you can chain them together to write powerful, readable
+data pipelines without any loops.</h2>
+</body>
+<script>
+//     Since map(), filter(), and most methods return a new array, you can chain them together to write powerful, readable
+// data pipelines without any loops.
+
+let std=[
+    {name:"Rahul",marks:22},
+    {name:"jitesh",marks:99},
+    {name:"Rohit",marks:36}
+
+]
+let totalPassingMarks=
+std.filter(s=>s.marks<23);
+
+std.map(s=>s.marks)
+
+std.reduce((a,b)=>a+b,0);
+
+console.log(totalPassingMarks);
+
+
+</script>
+</html>
