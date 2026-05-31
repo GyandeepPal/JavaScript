@@ -9,14 +9,70 @@
     
 </body>
 <script>
-//Given [3, 7, 2, 9, 1, 5, 8], use filter() to keep numbers greater than 5, then use map() to square each of those m numbers.
+//Given [3, 7, 2, 9, 1, 5, 8], use filter() to keep numbers greater than 5, then use map() to square each of those  numbers.
 
-let arr=[3, 7, 2, 9, 1, 5, 8];
+// let arr=[3, 7, 2, 9, 1, 5, 8];
 
-let arr2 = arr.filter(s=>s>=5)
-let arr3 = arr.map(a=>a*3)
-console.log(arr2);
+// let arr2 = arr.filter(s=>s>=5)
+// let arr3 = arr2.map(a=>a*7)
+// console.log(arr3);
 
 
+// Given students [{name:'Arya',marks:85}, {name:'Arya',marks:85}, {name:'Priya',marks:72}, {name:'Sam',marks:91}],
+// use reduce() to calculate the average marks.
+
+// let main=[
+//     {name:'Arya',marks:85},
+//     {name:'Arya',marks:85},
+//     {name:'Priya',marks:72},
+//     {name:'Sam',marks:91}
+// ]
+// let average = main.reduce((sum, curr) => sum + curr.marks, 0) / main.length;
+// console.log(average);
+
+// let main=[
+//     {name:'Arya',marks:85},
+//     {name:'Arya',marks:85},
+//     {name:'Priya',marks:72},
+//     {name:'Sam',marks:91}
+// ]
+
+// let average =main.reduce((sum,curr)=>sum+curr.marks,0) / main.length
+// console.log(average);
+
+
+
+// Question.
+
+//   Given products [{name:'Pen',price:20,inStock:true}, {name:'Book',price:150,inStock:false},
+// {name:'Bag',price:500,inStock:true}], 
+// filter only in-stock items, apply 10% discount with map(),
+//  then use reduce() to
+// get the total price.
+
+const products = [
+    { name: 'Pen', price: 20, inStock: true },
+    { name: 'Book', price: 150, inStock: false },
+    { name: 'Bag', price: 500, inStock: true }
+];
+
+// Step 1: Filter in-stock products
+const inStockProducts = products.filter(product => product.inStock);
+
+// Step 2: Apply 10% discount
+const discountedProducts = inStockProducts.map(product => ({
+    ...product,
+    price: product.price * 0.9
+}));
+
+// Step 3: Calculate total price
+const totalPrice = discountedProducts.reduce(
+    (sum, product) => sum + product.price,
+    0
+);
+
+console.log("In Stock Products:", inStockProducts);
+console.log("Discounted Products:", discountedProducts);
+console.log("Total Price:", totalPrice);
 </script>
 </html>
