@@ -1,3 +1,44 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Aage Jaao</h4>
+</body>
+<script>
+
+
+
+
+    const name=["Raj","rohit","rahul","Gyandeeppal","kuldeep"];
+    console.log("array",name);
+        // First occurrence of rahul
+
+    console.log("Index of rahul:", name.indexOf("rahul"));
+    console.log("Index of kuldeep:", name.indexOf("kuldeep"));
+    console.log("Index of rohit:", name.indexOf("rohit"));
+    
+
+    // Check if rahul exists
+        if (name.indexOf("rahul") !== -1) {
+            console.log("rahul is present in the array.");
+        }
+       // Check if kuldeep exists
+    
+    if (name.indexOf("kuldeeeep") === -1) {
+            console.log(" kuldeeeep is not present in the array.");
+        }
+
+
+
+</script>
+</html> -->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,23 +50,33 @@
     
 </body>
 <script>
+    // let main=["jay","neem","kull"]
+    // console.log("Array",main);
+    // console.log("jay in Array",main.indexOf("jay"));
+    // console.log("jay in Array",main.indexOf("kull"));
+    // console.log("jay in Array",main.indexOf("neem"));
+    // if(main.indexOf("jay")==-1){
+    //         console.log(" jay is  present in the array.");
+    // }
+    // if(main.indexOf("kulll")==-1){
+    //         console.log(" kulll is  present in the array.");
+    // }
+
+    let arr =[223,34,45,];
+    console.log(arr.push("40"));
+    console.log(arr.unshift());
     
-// indexOf() returns the index (position) of the first occurrence of a value. Returns -1 if the value is not found. Great for
-// checking position AND existence.
+    console.log(arr.push(99));
+    
+    
+    console.log(arr.pop());
+    
+    console.log(arr.shift());
+    
+    console.log(arr.includes(20));
 
-
-const fruits = [
-    "Apple",
-    "mango",
-    "banana",
-    "mango",
-
-]
-fruits.indexOf("kivi")
-if(fruits.indexOf("mango")!==-1){
-fruits.indexOf("mango",2)
-console.log(fruits.indexOf("mango", 2))
-}
+    console.log(arr.indexOf(30));
+    
 
 </script>
 </html>
