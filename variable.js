@@ -38,8 +38,25 @@
 // console.log(typeof x, typeof y, typeof z, typeof a, typeof s);
 
 
-let d ={              //OBJECT
-    name :"gyan deep",    
-    "job code": 343323
+// let d ={              //OBJECT
+//     name :"gyan deep",    
+//     "job code": 343323
+// }
+// console.log(d);
+
+
+
+// else if condition 
+
+let a = 88;   
+if (a > 33) {
+    console.log("are you valid");
+
+} else if(a==14) {
+    console.log("are you  audlet");
+
+}else{
+    console.log("are you older");
+    
 }
-console.log(d);
+
