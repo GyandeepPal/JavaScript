@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  /*
+Advective:
+Crazy
+Amazing
+Fire
+
+Shop name:
+Engin
+Foods
+Garments
+
+Another wold:
+
+Bros 
+Limited
+Hub
+ */
+
+  let rand = Math.random()
+  let First, Second, Third;
+  //let's generat the first word
+
+  if (rand < 0.33) {
+    First = "Crazy"
+  } else if (rand < 0.66 && rand < 0.33) {
+    First = "Amezing";
+  } else {
+    First = "Fire"
+  }//let's gemenrat the Second word
+
+  rand = Math.random()
+
+  if (rand < 0.33) {
+    Second = "Engin"
+  } else if (rand < 0.66 && rand < 0.33) {
+    Second = "Food";
+  } else {
+    Second = "Garment's"
+  }//let's generat the Third word
+
+  rand = Math.random()
+
+  if (rand < 0.33) {
+    Third = "Bros"
+  } else if (rand < 0.66 && rand < 0.33) {
+    Third = "Limited";
+  } else {
+    Third = "Hub"
+  }
+  console.log(`${First} ${Second} ${Third}`);
+
+</script>
+
+</html>
