@@ -15,19 +15,23 @@
 
 </style>
 <body>
-    <span class="cantainer">
-       <span="box" style="background-color: aquamarine;">Hey I am gyan</span>
-       <span="box">Hey I am gyan</span>
-    </span>
+    <div class="container">
+       <div="box" style="background-color: aquamarine;">
+        Hey I am gyan
+        <br>
+        <div="box" style="background-color:rgba(255, 0, 0, 0.518)" >Hey I am gyan</div>
+    </div>
+       
+    </div>
+<script>
+    let div =document.createElement("div");
+    div.innerHTML="I have been inserted <b> Gyan Bhai What are you doing right now</b>"
 
-</body>
-<script> 
-
-    // document.title = " Hey I am gyan"
-    // console.log(document.title);
-    // console.log(document.body);
-    // document.body.style.backgroundColor = "red"
+    div.setAttribute("class","created")
+    document.querySelector(".container").append(div)
 
 </script>
+</body>
+
 
 </html>

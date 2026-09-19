@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append</title>
+</head>
+
+<body>
+    <div class="container">
+        Hey How have you been
+        <div class="box">
+            I am fine
+        </div>
+    </div>
+</body>
+<script>
+
+    <!--createElement-->
+    // let div = document.createElement("div")
+    // div.innerHTML = "I am GYAN DEEP PAL <B>RAHUL PAL</B>"
+    // div.setAttribute("class","created");
+    // document.querySelector(".container").append(div)
+
+
+    // let container = document.querySelector(".container");
+    // container.append(div);
+    // container.before(div);
+    // container.prepend(div);
+    // container.after(div);
+    // container.replaceWith(newDiv);
+
+
+    // <!--insertAdjacentElement-->
+
+    let div = document.createElement("div");
+    div.innerHTML = "I am GYAN DEEP PAL <b>RAHUL PAL</b>";
+    let container = document.querySelector(".container");
+    container.insertAdjacentElement("beforeend", div);
+    // container.insertAdjacentElement("afterbegin", div);
+    // container.insertAdjacentElement("eforebegin", div);
+    // container.insertAdjacentElement("arterend", div);
+
+
+</script>
+
+</html>
