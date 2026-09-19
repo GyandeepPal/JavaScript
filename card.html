@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Card Clone</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgb(5, 5, 5);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 95%;
+            margin: 20px auto;
+        }
+
+        .card {
+            display: flex;
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .thumbnail {
+            position: relative;
+        }
+
+        .thumbnail img {
+            width: 350px;
+            border-radius: 12px;
+        }
+
+        .duration {
+            position: absolute;
+            bottom: 38px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 11px 8px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .content h3 {
+            font-size: 32px;
+            margin-bottom: 128px;
+        }
+
+        .content p {
+            color: rgb(170, 170, 170);
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container"></div>
+
+    <script>
+
+        let video = {
+            title: "Installing VS Code & How Websites Work | Sigma Web Development Course - Tutorial #1",
+            views: "8.1M views",
+            age: "2 years ago",
+            duration: "31:20",
+            thumbnail: "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg"
+        };
+
+        let card = `
+<div class="card">
+
+    <div class="thumbnail">
+        <img src="${video.thumbnail}">
+        <span class="duration">${video.duration}</span>
+    </div>
+
+    <div class="content">
+        <h3>${video.title}</h3>
+        <p>${video.views} • ${video.age}. </p>
+        
+    </div>
+
+</div>
+`;
+
+        document.querySelector(".container").innerHTML = card;
+
+    </script>
+
+</body>
+
+</html>
