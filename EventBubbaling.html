@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventBubbaling</title>
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        background-color: black;
+    }
+
+    .childe {
+        background-color: rgb(237, 17, 76);
+        padding: 130px 12px;
+        margin: 30px;
+        border: 3px solid;
+        cursor: pointer;
+        font-size: 55px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        font-weight: 900;
+        color: blue;
+
+    }
+
+    .childeContainer {
+        color: rgb(215, 211, 10);
+
+        background-color: rgb(47, 192, 11);
+        font-size: 55px;
+
+        padding: 30px 20px;
+        margin: 80px auto;
+        border: 3px solid;
+        cursor: pointer;
+        font-weight: 900;
+
+    }
+
+    .container {
+        background-color: rgba(24, 10, 219, 0.364);
+        padding: 30px 12px;
+        margin: 30px auto;
+        font-size: 55px;
+        color: brown;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid;
+        cursor: pointer;
+        font-weight: 900;
+    }
+</style>
+
+<body>
+    <div class="container">
+        I am the container
+        <div class="childeContainer">
+            I am the childeContainer
+            <div class="childe">I am a childe</div>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".childe").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("childe was clicked")
+        })
+
+        document.querySelector(".childeContainer").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("childeContainer was clicked")
+        })
+
+
+        document.querySelector(".container").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("Container was clicked")
+        })
+        function getRandomColor() {
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        // let a= setInterval(() => {
+        //     document.querySelector(".container").style.backgroundColor = getRandomColor();
+        //     document.querySelector(".childeContainer").style.backgroundColor = getRandomColor();
+        //     document.querySelector(".childe").style.backgroundColor = getRandomColor();
+        // }, 1000);
+        // clearInterval(a)      ///stop
+        // console.log(a);
+        
+
+      let b=  setTimeout(() => {
+            document.querySelector(".container").style.backgroundColor = getRandomColor();
+            document.querySelector(".childeContainer").style.backgroundColor = getRandomColor();
+            document.querySelector(".childe").style.backgroundColor = getRandomColor();
+        }, 2000);
+        clearTimeout(b)     //for stop
+    </script>
+</body>
+
+</html>
