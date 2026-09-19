@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        you can click hrer
+        <div class="box">
+            Hey i am box
+        </div>
+        <button id="btn">click</button>
+    </div>
+</body>
+<script>
+     button = document.getElementById("btn")
+    button.addEventListener("dblclick", () => {    //dblclick is dubble click
+        // alert("I was click Yaas...!")
+        document.querySelector(".box").innerHTML = "I am GYAN DEEP PAL <B>RAHUL PAL</B>"
+
+    })
+
+
+      button.addEventListener("contextmenu",()=>{
+        alert("dont hack us by right click")
+      })
+
+       document.addEventListener("keydown",(e)=>{
+        // alert("dont hack us by right click")
+        console.log(e.key );
+        console.log(e.keyCode);
+        
+      })
+   
+</script>
+
+</html>
