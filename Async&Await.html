@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async And Await</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // function getdata() {
+    //     return new Promise((res, rej) => {
+    //         setTimeout(() => {
+
+
+    //             res(554)
+    //         }, 3000);
+    //     })
+    // }
+    // console.log("This is the async");
+    // console.log("Do somethinks else ");
+    // console.log("Any more");
+
+    // let data = getdata();
+
+    // data.then((v) => {
+    //     console.log(v);
+
+    //     console.log("Yes i am doing some");
+    //     console.log("No i hade coplete That");
+
+    // });
+    // console.log(data);
+
+
+
+    //    async function getdata() {
+    //         return new Promise((res, rej) => {
+    //             setTimeout(() => {
+
+
+    //                 res(554)
+    //             }, 3000);
+    //         })
+    //     }
+
+    //     console.log("Gyan");
+    //     console.log("raga bhai");
+    //     console.log("rabchhod das");
+
+    //      async function main(){
+
+    //     console.log("This is the async");
+    //     console.log("Do somethinks else ");
+    //     console.log("Any more");
+
+    //     let data = await getdata();
+    //     console.log(data);
+    //     console.log("mey be kal");
+    //     console.log("Ajj nhi to kal");
+
+    // }
+    // main()
+
+
+
+    // fetch AIP'S
+
+    async function getdata() {
+       setTimeout( async() => {
+         let a = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+
+        let data = await a.json();
+
+        console.log(data);
+       }, 2200);
+    }
+
+    async function main() {
+         setTimeout( async() => {
+         let a = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+
+        let data = await a.json();
+
+        console.log(data);
+        let datas = await getdata();
+
+        console.log("How are you");
+       }, 3300);
+        
+    }
+
+    main()
+
+</script>
+
+</html>
