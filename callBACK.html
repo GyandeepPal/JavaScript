@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    console.log("hello rahul");
+
+
+    console.log("hey rahul how are you ");
+
+    let a = setInterval(() => {
+        console.log("how have you been Gyan");
+        clearInterval(a)
+    }, 0);
+
+    console.log("I am good what's about your");
+
+    let callback = (arg) => {
+        console.log(arg);
+
+    }
+
+    const loadScript = (src, callback) => {
+        let sc = document.createElement("script");
+
+        sc.onload=()=>{ 
+            callback("Hello Gyan Bhau")
+        }
+        sc.src = src;
+        document.head.append(sc)
+    }
+    loadScript("https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js", callback)
+</script>
+
+</html>
