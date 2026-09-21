@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        //"Async IIFE (Immediately Invoked Function Expression)". 
+
+
+        // async function name(params) {
+        //     return new Promise((res, rej) => {
+        //         setTimeout(() => {
+        //             res(88)
+        //         }, 2000);
+        //     }
+        //     )
+
+        // }
+        // (async function main(params) {
+        //     let a = await name();
+        //     let b = await name();
+        //     console.log(a, b);
+
+        // })
+        //     ()
+
+
+
+        // Array Destructuring
+
+        // let arr = [2, 2, 3, 4, 6, 4, 5, 6, 3]
+        // let [a, s, d, ...rest] = arr;
+        // console.log(a, s, d,rest);
+
+
+//         let obj = {
+//             a:99,
+//             d:33,
+//             c:35,
+//             b:65,
+//         }
+// let {a,d,c,b} = obj
+// console.log(a,b,d,c);
+
+
+function sum(a,b,c,d,f,g,h,...rest) {
+    console.log(a,b,c,...rest);
+
+}
+let arr =[1,2,3,3,4,5,5,6,]
+sum(...arr)
+
+
+    </script>
+</body>
+
+</html>
