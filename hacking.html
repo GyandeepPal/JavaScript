@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+
+    body {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        font-size: 20px;
+        height: 200px;
+
+        width: 600px;
+        border: 2px solid;
+        margin: 200px auto;
+
+        padding: 48px 71px;
+        align-items: center;
+        justify-items: center;
+
+        border-radius: 11px;
+        box-shadow: 4px 4px 22px;
+        text-decoration: rgb(39, 170, 170);
+
+        font-family: 'Share Tech Mono', monospace;
+
+    }
+</style>
+
+<body>
+
+</body>
+<div class="container">Please wait</div>
+<script>
+    const addItems = async (item) => {
+        await randomDelay();
+        let div = document.createElement("div")
+        div.innerHTML = item;
+        document.body.append(div)
+    }
+
+    const randomDelay = () => {
+        return new Promise((res, rej) => {
+            timeout = 1 + 6 * Math.random()
+            setTimeout(() => {
+                res()
+            }, timeout * 1000);
+        })
+    }
+    async function name() {
+
+        let t = setInterval(() => {
+            let last = document.body.getElementsByTagName("div");
+            last = last[last.length -1]
+            if (last.innerHTML.endsWith("...")) {
+                last.innerHTML = last.innerHTML.slice(0, last.innerHTML.length - 3)
+            }
+            else {
+
+                last.innerHTML = last.innerHTML + "."
+            }
+
+        }, 350);
+
+
+        let text = ["Initialized Hacking now reading your data",
+            "Reading your Files",
+            "Password files Detected",
+            "Sending all passwords and personal files to server",
+            "Cleaning up"]
+
+        for (const item of text) {
+            await addItems(item);
+        }
+        await randomDelay()
+        clearInterval(t);
+    }
+    name()
+
+</script>
+
+</html>
