@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let a = prompt("Enter first number");
+    let b = prompt("Enter second number");
+    
+    if (isNaN(a) || isNaN(b)) {
+        throw new SyntaxError("Only numbers are allowed");
+    }
+    let sum = parseInt(a) + parseInt(b);
+    function name() {
+
+        try {
+            console.log("The sum is:", sum);
+            return false
+
+        } catch (error) {
+            console.log("Sorry:", error.message);
+            return true
+        }
+        finally {
+            console.log("allway's running");
+        }
+    }
+    name()
+</script>
+
+</html>
