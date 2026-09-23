@@ -1,61 +1,52 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    
-<input type="text" id="inp" placeholder="Enter Task">
-<button id="btn">Add</button>
-
-<ul id="list"></ul>
-
-
-</body>
-
-<script>
-
-let inp = document.querySelector("#inp");
-let btn = document.querySelector("#btn");
-let list = document.querySelector("#list");
-
-btn.addEventListener("click", () => {
-
-    let li = document.createElement("li");
-
-    li.innerText = inp.value;
-
-    list.append(li);
-
-    inp.value = "";
-
-});
-
-</script>
-</html> -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <input id="inp" type="text" placeholder="Enter any Thing">
+    <button id="btn">Add</button>
+    <button id="Delet">Delet</button>
+    <button id="Edit">Edit</button>
+    <button id="tug">toggle</button>
+    <div id="list"></div>
 
-  
+
 </body>
-    <script>
-        let count = 0;
+<script>
 
-btn.addEventListener("click", () => {
-    count++;
-    console.log(count);
-});
-    </script>
+
+    let inp = document.querySelector("#inp")
+    let btn = document.querySelector("#btn")
+    let list = document.querySelector("#list")
+
+
+    let del = document.querySelector("#Delet");
+    btn.addEventListener("click", () => {
+
+        if (inp.value === "") return;
+
+        let li = document.createElement("li");
+
+        li.innerText = inp.value;
+
+        list.append(li);
+
+        li.addEventListener("click", () => {
+            li.classList.toggle("done");
+        });
+
+        li.addEventListener("dblclick", () => {
+            let newText = prompt("Edit Task");
+            li.innerText = newText;
+        });
+
+        inp.value = "";
+    });
+</script>
+
 </html>
