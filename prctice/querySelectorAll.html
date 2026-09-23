@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelectorAll</title>
+</head>
+
+<body>
+    <!-- <p>Hello</p>
+<p>World</p>
+<p>JavaScript</p> -->
+
+    <!-- <button>Save</button> -->
+
+
+    <!-- <h1>Hello</h1>
+    <p>JavaScript</p> -->
+
+    <!-- 
+    <p>Hello</p> -->
+
+
+    <ul id="list">
+        <li>React</li>
+        <li>Node</li>
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+
+
+
+
+<script>
+    // let p = document.querySelectorAll("p");
+
+    // console.log(p[0]);
+    // console.log(p[1]);
+    // console.log(p[2]);
+
+
+    // let p =document.querySelectorAll("p")
+    // p.forEach((item)=>{
+    //     console.log(item.innerText);
+    // })
+
+
+
+    // let p =document.querySelectorAll("p")
+    // p.forEach((item)=>{
+    //     item.style.color="blue"
+    // })
+
+    //     let p = document.querySelectorAll("p");
+
+    // p.forEach((item) => {
+    //     item.innerText = "Hello";
+    // });
+
+    // let btn = document.querySelector("button");
+
+    // btn.addEventListener("click", (event) => {
+    //     console.log(event.target);
+    // });
+
+    // document.querySelector("h1,p").addEventListener("click", (event) => {
+    //     console.log(event.target);
+    // });
+
+    // let p = document.querySelector("p");
+
+    // p.addEventListener("click", (event) => {
+    //     console.log(event.target.innerText);
+    // });
+
+
+    let list = document.querySelector("#list");
+
+    list.addEventListener("click", (event) => {
+        console.log(event.target.innerText);
+    });
+
+</script>
+
+</html>
